@@ -1,0 +1,32 @@
+{
+  "name": "@borracciablu/dh-addeventlistener",
+  "version": "0.0.0",
+  "description": "Helpers functions to facilitate event listener on DOM elements.",
+  "main": "index.js",
+  "scripts": {
+    "test": "browserify test.js | tape-run",
+    "lint": "eslint index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/borracciaBlu/dh-addeventlistener.git"
+  },
+  "keywords": [
+    "utility",
+    "dom",
+    "addEventListener",
+    "event"
+  ],
+  "author": "Marco Buttini",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/borracciaBlu/dh-addeventlistener/issues"
+  },
+  "homepage": "https://github.com/borracciaBlu/dh-addeventlistener#readme",
+  "devDependencies": {
+    "browserify": "^16.5.1",
+    "eslint": "^6.8.0",
+    "tape": "^4.13.2",
+    "tape-run": "^7.0.0"
+  }
+}
