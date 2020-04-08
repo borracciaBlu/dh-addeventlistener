@@ -53,6 +53,7 @@ onKeyDown(itm, clb);
 ```
 
 ### generateEventFn(eventType) 
+In case you need an event not covered in the current api.
 
 ```
 var onMouseEnter = generateEventFn('mouseenter');
