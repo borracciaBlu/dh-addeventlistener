@@ -8,6 +8,7 @@ function fireEvent(eventName) {
     document.body.dispatchEvent(event);
 }
 
+
 test('when interact with element, check for event', function (t) {
     var stub = 1;
 
@@ -44,6 +45,23 @@ test('when interact with element, check for event', function (t) {
     fireEvent('mouseenter');
 
     t.equal(stub, 'mouseenter');
+
+    t.end();
+});
+
+test('when interact with array of elements and array of functions, check for event', function (t) {
+    var stub = 1;
+    t.equal(stub, 1);
+
+    onClick([document.body], [() => stub = 'clack']);
+    fireEvent('click');
+
+    t.equal(stub, 'clack');
+
+    onFocus([document.body], [() => stub = 'focus']);
+    fireEvent('focus');
+
+    t.equal(stub, 'focus');
 
     t.end();
 });
