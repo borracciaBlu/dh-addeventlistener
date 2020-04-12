@@ -3,6 +3,7 @@
   "version": "0.0.2",
   "description": "Helpers functions to facilitate event listener on DOM elements.",
   "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "test": "browserify test.js | tape-run",
     "lint": "eslint index.js"
