@@ -3,6 +3,7 @@
 [![dependencies Status](https://david-dm.org/borracciaBlu/dh-addeventlistener/status.svg)](https://david-dm.org/borracciaBlu/dh-addeventlistener)
 [![devDependencies Status](https://david-dm.org/borracciaBlu/dh-addeventlistener/dev-status.svg)](https://david-dm.org/borracciaBlu/dh-addeventlistener?type=dev)
 [![npm version](https://badge.fury.io/js/%40borracciablu%2Fdh-addeventlistener.svg)](https://badge.fury.io/js/%40borracciablu%2Fdh-addeventlistener)
+[![Coverage Status](https://coveralls.io/repos/github/borracciaBlu/dh-addeventlistener/badge.svg?branch=master)](https://coveralls.io/github/borracciaBlu/dh-addeventlistener?branch=master)
 [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)  
 Helpers functions to facilitate event listener on DOM elements.
 
