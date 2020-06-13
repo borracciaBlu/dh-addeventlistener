@@ -1,4 +1,4 @@
-describe('dh-classlist', function tests() {
+describe('dh-addeventlistener', function tests() {
     var dh = require('../');
 
     var onClick = dh.onClick;
@@ -15,11 +15,9 @@ describe('dh-classlist', function tests() {
     if (! testNode) {
         function NodeList() {};
 
-        class Event {
-            constructor(type) {
-                this.type = type;
-            }
-        }
+        function Event(type) {
+            this.type = type;
+        };
 
         global.NodeList = NodeList;
         global.Event = Event;
