@@ -1,3 +1,5 @@
+'use strict';
+
 function addEventListenerEvent(eventType, itm, callbacks) {
     itm &&
     itm.addEventListener &&
