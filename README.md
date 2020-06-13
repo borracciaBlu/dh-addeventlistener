@@ -64,3 +64,16 @@ onMouseEnter(itm, clb);
 ```
 
 For the full list of `eventTypes` see [Event reference](https://developer.mozilla.org/en-US/docs/Web/Events).
+
+
+## CDN
+Recommended CDN:
+
+https://unpkg.com/@borracciablu/dh-addeventlistener@latest/dist/dh-addeventlistener.min.js
+
+```
+var {onClick} = window.dhAddEventListener;
+
+// Alternative syntax
+var onClick = window.dhAddEventListener.onClick;
+```
