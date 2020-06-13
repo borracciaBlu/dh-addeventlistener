@@ -9,7 +9,8 @@
     "lint": "eslint index.js",
     "browserify": "rm -rf dist && mkdir dist && browserify index.js --standalone dhAddEventListener -o dist/dh-addeventlistener.js",
     "minify": "uglifyjs dist/dh-addeventlistener.js --source-map -cm -o dist/dh-addeventlistener.min.js",
-    "prepublishOnly": "npm run browserify && npm run minify"
+    "prepublishOnly": "npm run browserify && npm run minify",
+    "preversion": "npx auto-changelog"
   },
   "repository": {
     "type": "git",
