@@ -1,6 +1,6 @@
 {
   "name": "@borracciablu/dh-addeventlistener",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Helpers functions to facilitate event listener on DOM elements.",
   "main": "index.js",
   "types": "index.d.ts",
@@ -9,8 +9,7 @@
     "lint": "eslint index.js",
     "browserify": "rm -rf dist && mkdir dist && browserify index.js --standalone dhAddEventListener -o dist/dh-addeventlistener.js",
     "minify": "uglifyjs dist/dh-addeventlistener.js --source-map -cm -o dist/dh-addeventlistener.min.js",
-    "prepublishOnly": "npm run browserify && npm run minify",
-    "preversion": "npx auto-changelog"
+    "prepublishOnly": "npm run browserify && npm run minify"
   },
   "repository": {
     "type": "git",
