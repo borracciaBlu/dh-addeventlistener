@@ -7,6 +7,8 @@
 [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)  
 Helpers functions to facilitate event listener on DOM elements.
 
+[![Sauce Test Status](https://saucelabs.com/browser-matrix/borracciaBlu-dh-addeventlistener.svg)](https://saucelabs.com/u/borracciaBlu-dh-addeventlistener)
+
 ## Installing
 
 `npm install @borracciablu/dh-addeventlistener`
