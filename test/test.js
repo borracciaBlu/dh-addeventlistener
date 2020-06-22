@@ -15,12 +15,10 @@ describe('dh-addeventlistener', function tests() {
     if (! testNode) {
         function NodeList() {};
 
-        function Event(type) {
-            this.type = type;
-        };
-
         global.NodeList = NodeList;
-        global.Event = Event;
+        global.Event = (typeof Event !== 'undefined')
+                            ? Event
+                            : function(type) { this.type = type; };
 
         var testNode = (function() {
             function addEventListenerFn(evType, callback) {
@@ -57,8 +55,21 @@ describe('dh-addeventlistener', function tests() {
         })();
     }
 
+    function createNewEvent(eventName) {
+        var event;
+
+        if (typeof(Event) === 'function') {
+            event = new Event(eventName);
+        } else {
+            event = document.createEvent('Event');
+            event.initEvent(eventName, true, true);
+        }
+
+        return event;
+    }
+
     function fireEvent(eventName) {
-        var event = new Event(eventName);
+        var event = createNewEvent(eventName);
         testNode.dispatchEvent(event);
     }
 
@@ -68,34 +79,34 @@ describe('dh-addeventlistener', function tests() {
 
             assert.equal(stub, 1);
 
-            onClick(testNode, () => stub = 'click');
+            onClick(testNode, function() { stub = 'click'; });
             fireEvent('click');
 
             assert.equal(stub, 'click');
 
-            onFocus(testNode, () => stub = 'focus');
+            onFocus(testNode, function() { stub = 'focus'; });
             fireEvent('focus');
 
             assert.equal(stub, 'focus')
 
-            onBlur(testNode, () => stub = 'blur');
+            onBlur(testNode, function() { stub = 'blur'; });
             fireEvent('blur');
 
             assert.equal(stub, 'blur');
 
-            onKeyDown(testNode, () => stub = 'keydown');
+            onKeyDown(testNode, function() { stub = 'keydown'; });
             fireEvent('keydown');
 
             assert.equal(stub, 'keydown');
 
-            onKeyUp(testNode, () => stub = 'keyup');
+            onKeyUp(testNode, function() { stub = 'keyup'; });
             fireEvent('keyup');
 
             assert.equal(stub, 'keyup');
 
             var onMouseEnter = generateEventFn('mouseenter');
 
-            onMouseEnter(testNode, () => stub = 'mouseenter');
+            onMouseEnter(testNode, function() { stub = 'mouseenter'; });
             fireEvent('mouseenter');
 
             assert.equal(stub, 'mouseenter');
@@ -107,12 +118,12 @@ describe('dh-addeventlistener', function tests() {
             var stub = 1;
             assert.equal(stub, 1);
 
-            onClick([testNode], [() => stub = 'clack']);
+            onClick([testNode], [function() { stub = 'clack'; }]);
             fireEvent('click');
 
             assert.equal(stub, 'clack');
 
-            onFocus([testNode], [() => stub = 'focus']);
+            onFocus([testNode], [function() { stub = 'focus'; }]);
             fireEvent('focus');
 
             assert.equal(stub, 'focus');
@@ -123,12 +134,12 @@ describe('dh-addeventlistener', function tests() {
         it('should be resilient', function () {
             var stub = 1;
 
-            onKeyUp(null, () => stub = 'keyup');
-            onKeyUp([null], () => stub = 'keyup');
-            onKeyUp(undefined, () => stub = 'keyup');
-            onKeyUp([undefined], () => stub = 'keyup');
-            onKeyUp({}, () => stub = 'keyup');
-            onKeyUp([{}], () => stub = 'keyup');
+            onKeyUp(null, function() { stub = 'keyup'; });
+            onKeyUp([null], function() { stub = 'keyup'; });
+            onKeyUp(undefined, function() { stub = 'keyup'; });
+            onKeyUp([undefined], function() { stub = 'keyup'; });
+            onKeyUp({}, function() { stub = 'keyup'; });
+            onKeyUp([{}], function() { stub = 'keyup'; });
         });
     });
 });
