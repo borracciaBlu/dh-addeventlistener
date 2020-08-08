@@ -74,7 +74,7 @@ var onBlur = generateEventFn('blur');
  * @example
  * var itm = document.querySelectorAll('.btn');
  * var clb = [(event) => console.log('click')];
- * onBlur(itm, clb);
+ * onClick(itm, clb);
  *
  * @param NodeList | Node itmList
  * @param Function[] | Function clbList
@@ -87,7 +87,7 @@ var onClick = generateEventFn('click');
  * @example
  * var itm = document.querySelectorAll('.btn');
  * var clb = [(event) => console.log('key down')];
- * onBlur(itm, clb);
+ * onKeyDown(itm, clb);
  *
  * @param NodeList | Node itmList
  * @param Function[] | Function clbList
@@ -100,12 +100,25 @@ var onKeyDown = generateEventFn('keydown');
  * @example
  * var itm = document.querySelectorAll('.btn');
  * var clb = [(event) => console.log('key up')];
- * onBlur(itm, clb);
+ * onKeyUp(itm, clb);
  *
  * @param NodeList | Node itmList
  * @param Function[] | Function clbList
  */
 var onKeyUp = generateEventFn('keyup');
+
+/**
+ * Add event listener for change to a Node
+ *
+ * @example
+ * var itm = document.querySelectorAll('.select');
+ * var clb = [(event) => console.log('change')];
+ * onChange(itm, clb);
+ *
+ * @param NodeList | Node itmList
+ * @param Function[] | Function clbList
+ */
+var onChange = generateEventFn('change');
 
 
 module.exports.generateEventFn = generateEventFn;
@@ -114,3 +127,4 @@ module.exports.onBlur = onBlur;
 module.exports.onClick = onClick;
 module.exports.onKeyDown = onKeyDown;
 module.exports.onKeyUp = onKeyUp;
+module.exports.onChange = onChange;

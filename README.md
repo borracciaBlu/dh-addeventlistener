@@ -55,6 +55,13 @@ var clb = () => console.log('key down');
 onKeyDown(itm, clb);
 ```
 
+### onChange(itmList, clsList)
+```
+var itm = document.querySelectorAll('.select');
+var clb = () => console.log('change');
+onChange(itm, clb);
+```
+
 ### generateEventFn(eventType) 
 In case you need an event not covered in the current api.
 
