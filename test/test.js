@@ -6,6 +6,7 @@ describe('dh-addeventlistener', function tests() {
     var onBlur = dh.onBlur;
     var onKeyDown = dh.onKeyDown;
     var onKeyUp = dh.onKeyUp;
+    var onChange = dh.onChange;
     var generateEventFn = dh.generateEventFn;
 
     var assert = require('assert');
@@ -46,6 +47,7 @@ describe('dh-addeventlistener', function tests() {
                 keyup: [],
                 keydown: [],
                 mouseenter: [],
+                change: [],
             };
 
             o.addEventListener = addEventListenerFn;
@@ -103,6 +105,11 @@ describe('dh-addeventlistener', function tests() {
             fireEvent('keyup');
 
             assert.equal(stub, 'keyup');
+
+            onChange(testNode, function() { stub = 'change'; });
+            fireEvent('change');
+
+            assert.equal(stub, 'change');
 
             var onMouseEnter = generateEventFn('mouseenter');
 

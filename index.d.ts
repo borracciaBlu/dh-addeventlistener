@@ -8,3 +8,4 @@ export declare function onBlur(itmList: NodeListLike, clbList: CallbackList) : v
 export declare function onClick(itmList: NodeListLike, clbList: CallbackList) : void;
 export declare function onKeyDown(itmList: NodeListLike, clbList: CallbackList) : void;
 export declare function onKeyUp(itmList: NodeListLike, clbList: CallbackList) : void;
+export declare function onChange(itmList: NodeListLike, clbList: CallbackList) : void;
