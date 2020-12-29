@@ -1,5 +1,5 @@
 # dh-addeventlistener
-[![Build Status](https://travis-ci.org/borracciaBlu/dh-addeventlistener.svg?branch=master)](https://travis-ci.org/borracciaBlu/dh-addeventlistener)
+[![Build Status](https://github.com/borracciaBlu/dh-addeventlistener/workflows/build-test/badge.svg)](https://github.com/borracciaBlu/dh-addeventlistener/actions?query=workflow%3Abuild-test)
 [![dependencies Status](https://david-dm.org/borracciaBlu/dh-addeventlistener/status.svg)](https://david-dm.org/borracciaBlu/dh-addeventlistener)
 [![devDependencies Status](https://david-dm.org/borracciaBlu/dh-addeventlistener/dev-status.svg)](https://david-dm.org/borracciaBlu/dh-addeventlistener?type=dev)
 [![npm version](https://badge.fury.io/js/%40borracciablu%2Fdh-addeventlistener.svg)](https://badge.fury.io/js/%40borracciablu%2Fdh-addeventlistener)
