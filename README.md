@@ -35,28 +35,28 @@ var clb = () => console.log('focus');
 onFocus(itm, clb);
  ```
 
-### onBlur(itmList, clsList)
+### onBlur(itmList, clbList)
 ```js
 var itm = document.querySelectorAll('.btn');
 var clb = () => console.log('blur');
 onBlur(itm, clb);
 ```
 
-### onKeyUp(itmList, clsList)
+### onKeyUp(itmList, clbList)
 ```js
 var itm = document.querySelectorAll('.btn');
 var clb = () => console.log('key up');
 onKeyUp(itm, clb);
 ```
 
-### onKeyDown(itmList, clsList)
+### onKeyDown(itmList, clbList)
 ```js
 var itm = document.querySelectorAll('.btn');
 var clb = () => console.log('key down');
 onKeyDown(itm, clb);
 ```
 
-### onChange(itmList, clsList)
+### onChange(itmList, clbList)
 ```js
 var itm = document.querySelectorAll('.select');
 var clb = () => console.log('change');
