@@ -1,6 +1,6 @@
 {
   "name": "@borracciablu/dh-addeventlistener",
-  "version": "0.2.30",
+  "version": "0.2.31",
   "description": "Helpers functions to facilitate event listener on DOM elements.",
   "main": "index.js",
   "types": "index.d.ts",
