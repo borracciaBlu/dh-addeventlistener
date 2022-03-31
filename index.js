@@ -1,21 +1,22 @@
 'use strict';
 
+function getListOrArray(fn) {
+	return function(itmList) {
+	    return fn(itmList) ? itmList : new Array(itmList);
+	}
+}
+
+function isArrayLike(itmList) {
+	return itmList instanceof NodeList || Array.isArray(itmList);
+}
+
+var getArray = getListOrArray(Array.isArray);
+var getArrayLike = getListOrArray(isArrayLike);
+
 function addEventListenerEvent(eventType, itm, callbacks) {
     itm &&
     itm.addEventListener &&
     itm.addEventListener(eventType, callbacks);
-}
-
-function getArrayLike(itmList) {
-    return (itmList instanceof NodeList || Array.isArray(itmList))
-        ? itmList
-        : new Array(itmList);
-}
-
-function getArray(itmList) {
-    return Array.isArray(itmList)
-        ? itmList
-        : new Array(itmList);
 }
 
 /**
