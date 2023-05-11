@@ -1,12 +1,24 @@
-# dh-addeventlistener
-[![npm version](https://badge.fury.io/js/%40borracciablu%2Fdh-addeventlistener.svg)](https://badge.fury.io/js/%40borracciablu%2Fdh-addeventlistener)
-[![Coverage Status](https://coveralls.io/repos/github/borracciaBlu/dh-addeventlistener/badge.svg?branch=master)](https://coveralls.io/github/borracciaBlu/dh-addeventlistener?branch=master)
-[![Build Status](https://github.com/borracciaBlu/dh-addeventlistener/workflows/build-test/badge.svg)](https://github.com/borracciaBlu/dh-addeventlistener/actions?query=workflow%3Abuild-test)
-[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
+<p align="center">
+  <a href="https://github.com/borracciaBlu/dh-addeventlistener/" target="_blank">
+    <img src="https://user-images.githubusercontent.com/2061731/237676043-b509943c-7478-41b9-bb79-03078e75bd13.svg" width="240px" height="55px" alt="dh-addeventlistener" />
+  </a>
 
-Helpers functions to facilitate event listener on DOM elements.
+  <br>
+  <span align="center">
+    Helpers functions to facilitate event listener on DOM elements.
+  </span>
+</p>
 
-[![Sauce Test Status](https://saucelabs.com/browser-matrix/borracciaBlu-dh-addeventlistener.svg)](https://saucelabs.com/u/borracciaBlu-dh-addeventlistener)
+<p dir="auto"  align="center">
+    <a href="https://badge.fury.io/js/%40borracciablu%2Fdh-addeventlistener"><img src="https://badge.fury.io/js/%40borracciablu%2Fdh-addeventlistener.svg" alt="npm version"></a>
+    <a href="https://coveralls.io/github/borracciaBlu/dh-addeventlistener?branch=master"><img src="https://coveralls.io/repos/github/borracciaBlu/dh-addeventlistener/badge.svg?branch=master" alt="Coverage Status"></a>
+    <a href="https://github.com/borracciaBlu/dh-addeventlistener/actions?query=workflow%3Abuild-test"><img src="https://github.com/borracciaBlu/dh-addeventlistener/workflows/build-test/badge.svg" alt="Build Status"></a>
+    <a href="https://github.com/borracciaBlu/dh-addeventlistener/blob/master/LICENSE"><img src="https://img.shields.io/badge/License-BSD%203--Clause-blue.svg" alt="License"></a>
+</p>
+
+<p dir="auto"  align="center">
+	<a href="https://saucelabs.com/u/borracciaBlu-dh-addeventlistener"><img src="https://saucelabs.com/browser-matrix/borracciaBlu-dh-addeventlistener.svg" alt="Sauce Test Status"></a>
+</p>
 
 ## Installing
 
