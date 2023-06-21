@@ -40,7 +40,7 @@
   },
   "homepage": "https://github.com/borracciaBlu/dh-addeventlistener#readme",
   "devDependencies": {
-    "@borracciablu/banner-cli": "^0.1.0",
+    "@borracciablu/banner-cli": "^1.0.0",
     "@wdio/cli": "^8.0.6",
     "@wdio/local-runner": "^8.0.6",
     "@wdio/mocha-framework": "^8.0.6",
