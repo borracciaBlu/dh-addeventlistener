@@ -48,7 +48,7 @@
     "@wdio/spec-reporter": "^8.0.6",
     "assert": "^2.0.0",
     "browserify": "^17.0.0",
-    "eslint": "^8.2.0",
+    "eslint": "^9.0.0",
     "gh-pages": "^6.0.0",
     "mocha": "^10.0.0",
     "nyc": "^15.1.0",
