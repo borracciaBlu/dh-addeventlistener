@@ -12,10 +12,8 @@
   "scripts": {
     "lint": "eslint index.js",
     "x--------------------TEST------------------------x": "Code coverage",
-    "test": "c8 mocha test/test.js",
+    "test": "c8 node --test test/test.js",
     "coveralls": "c8 npm test && c8 report --reporter=lcov",
-    "test-build": "browserify test/test.js -o test/test-browser.js",
-    "build-gh-pages": "node test/gh-test.js",
     "x--------------------BUILD------------------------x": "create - minify - banner",
     "browserify": "rm -rf dist && mkdir dist && browserify index.cjs --standalone dhAddEventListener -o dist/dh-addeventlistener.js",
     "minify": "uglifyjs dist/dh-addeventlistener.js --source-map -cm -o dist/dh-addeventlistener.min.js",
@@ -46,12 +44,9 @@
   "homepage": "https://github.com/borracciaBlu/dh-addeventlistener#readme",
   "devDependencies": {
     "@borracciablu/banner-cli": "^1.0.0",
-    "assert": "^2.0.0",
     "browserify": "^17.0.1",
     "c8": "11.0.0",
     "eslint": "^9.0.0",
-    "gh-pages": "^6.0.0",
-    "mocha": "^10.0.0",
     "uglify-js": "^3.12.7"
   }
 }
