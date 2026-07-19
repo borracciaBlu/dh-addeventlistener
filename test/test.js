@@ -1,15 +1,8 @@
+import {onClick, onFocus, onBlur, onKeyDown, onKeyUp, onChange, generateEventFn} from "../index.js";
+import assert from 'assert';
+
 describe('dh-addeventlistener', function tests() {
-    var dh = require('../');
 
-    var onClick = dh.onClick;
-    var onFocus = dh.onFocus;
-    var onBlur = dh.onBlur;
-    var onKeyDown = dh.onKeyDown;
-    var onKeyUp = dh.onKeyUp;
-    var onChange = dh.onChange;
-    var generateEventFn = dh.generateEventFn;
-
-    var assert = require('assert');
 
     var testNode = typeof document !== 'undefined' && document.body;
 

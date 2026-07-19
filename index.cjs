@@ -10,8 +10,8 @@ function isArrayLike(itmList) {
     return itmList instanceof NodeList || Array.isArray(itmList);
 }
 
-const getArray = getListOrArray(Array.isArray);
-const getArrayLike = getListOrArray(isArrayLike);
+var getArray = getListOrArray(Array.isArray);
+var getArrayLike = getListOrArray(isArrayLike);
 
 function addEventListenerEvent(eventType, itm, callbacks) {
     itm &&
@@ -30,7 +30,7 @@ function addEventListenerEvent(eventType, itm, callbacks) {
  * @param String action
  * @return Function
  */
-export function generateEventFn(eventType) {
+function generateEventFn(eventType) {
     return function(itmList, clbList) {
         itmList = getArrayLike(itmList);
         clbList = getArray(clbList);
@@ -54,7 +54,7 @@ export function generateEventFn(eventType) {
  * @param NodeList | Node itmList
  * @param Function[] | Function clbList
  */
-export const onFocus = generateEventFn('focus');
+var onFocus = generateEventFn('focus');
 
 /**
  * Add event listener for blur to a Node
@@ -67,7 +67,7 @@ export const onFocus = generateEventFn('focus');
  * @param NodeList | Node itmList
  * @param Function[] | Function clbList
  */
-export const onBlur = generateEventFn('blur');
+var onBlur = generateEventFn('blur');
 
 /**
  * Add event listener for click to a Node
@@ -80,7 +80,7 @@ export const onBlur = generateEventFn('blur');
  * @param NodeList | Node itmList
  * @param Function[] | Function clbList
  */
-export const onClick = generateEventFn('click');
+var onClick = generateEventFn('click');
 
 /**
  * Add event listener for keydown to a Node
@@ -93,7 +93,7 @@ export const onClick = generateEventFn('click');
  * @param NodeList | Node itmList
  * @param Function[] | Function clbList
  */
-export const onKeyDown = generateEventFn('keydown');
+var onKeyDown = generateEventFn('keydown');
 
 /**
  * Add event listener for keyup to a Node
@@ -106,7 +106,7 @@ export const onKeyDown = generateEventFn('keydown');
  * @param NodeList | Node itmList
  * @param Function[] | Function clbList
  */
-export const onKeyUp = generateEventFn('keyup');
+var onKeyUp = generateEventFn('keyup');
 
 /**
  * Add event listener for change to a Node
@@ -119,4 +119,13 @@ export const onKeyUp = generateEventFn('keyup');
  * @param NodeList | Node itmList
  * @param Function[] | Function clbList
  */
-export const onChange = generateEventFn('change');
+var onChange = generateEventFn('change');
+
+
+module.exports.generateEventFn = generateEventFn;
+module.exports.onFocus = onFocus;
+module.exports.onBlur = onBlur;
+module.exports.onClick = onClick;
+module.exports.onKeyDown = onKeyDown;
+module.exports.onKeyUp = onKeyUp;
+module.exports.onChange = onChange;
