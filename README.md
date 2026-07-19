@@ -16,10 +16,6 @@
     <a href="https://github.com/borracciaBlu/dh-addeventlistener/blob/master/LICENSE"><img src="https://img.shields.io/badge/License-BSD%203--Clause-blue.svg" alt="License"></a>
 </p>
 
-<p dir="auto"  align="center">
-	<a href="https://saucelabs.com/u/borracciaBlu-dh-addeventlistener"><img src="https://saucelabs.com/browser-matrix/borracciaBlu-dh-addeventlistener.svg" alt="Sauce Test Status"></a>
-</p>
-
 ## Installing
 
 `npm install @borracciablu/dh-addeventlistener`
