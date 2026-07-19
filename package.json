@@ -4,15 +4,20 @@
   "description": "Helpers functions to facilitate event listener on DOM elements.",
   "main": "index.js",
   "types": "index.d.ts",
+  "type": "module",
+  "exports": {
+    "require": "./index.cjs",
+    "import": "./index.js"
+  },
   "scripts": {
     "lint": "eslint index.js",
     "x--------------------TEST------------------------x": "Code coverage",
-    "test": "nyc --reporter=html --reporter=text mocha test/test.js",
-    "coveralls": "nyc npm test && nyc report --reporter=lcov",
+    "test": "c8 mocha test/test.js",
+    "coveralls": "c8 npm test && c8 report --reporter=lcov",
     "test-build": "browserify test/test.js -o test/test-browser.js",
     "build-gh-pages": "node test/gh-test.js",
     "x--------------------BUILD------------------------x": "create - minify - banner",
-    "browserify": "rm -rf dist && mkdir dist && browserify index.js --standalone dhAddEventListener -o dist/dh-addeventlistener.js",
+    "browserify": "rm -rf dist && mkdir dist && browserify index.cjs --standalone dhAddEventListener -o dist/dh-addeventlistener.js",
     "minify": "uglifyjs dist/dh-addeventlistener.js --source-map -cm -o dist/dh-addeventlistener.min.js",
     "banner": "banner-cli 'dist/*.js'",
     "prepublishOnly": "npm run browserify && npm run minify && npm run banner"
@@ -28,6 +33,7 @@
     "event"
   ],
   "files": [
+    "index.cjs",
     "index.js",
     "index.d.ts",
     "dist"
@@ -42,10 +48,10 @@
     "@borracciablu/banner-cli": "^1.0.0",
     "assert": "^2.0.0",
     "browserify": "^17.0.1",
+    "c8": "11.0.0",
     "eslint": "^9.0.0",
     "gh-pages": "^6.0.0",
     "mocha": "^10.0.0",
-    "nyc": "^18.0.0",
     "uglify-js": "^3.12.7"
   }
 }
