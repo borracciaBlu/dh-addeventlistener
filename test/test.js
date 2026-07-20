@@ -1,5 +1,7 @@
+import { describe, it } from 'node:test';
+import assert from 'node:assert';
+
 import {onClick, onFocus, onBlur, onKeyDown, onKeyUp, onChange, generateEventFn} from "../index.js";
-import assert from 'assert';
 
 describe('dh-addeventlistener', function tests() {
 
